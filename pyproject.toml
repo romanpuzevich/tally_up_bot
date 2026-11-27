@@ -1,0 +1,19 @@
+[project]
+name = "tally-up-bot"
+version = "0.1.0"
+requires-python = ">=3.13,<3.14"
+dependencies = [
+    "aiogram>=3.20,<4",
+    "aiosqlite>=0.21,<1",
+    "sqlalchemy[asyncio]>=2.0,<3",
+    "python-dotenv>=1,<2",
+    "tzdata",
+]
+
+[dependency-groups]
+dev = ["pytest>=8,<10", "pytest-asyncio>=1,<2"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+pythonpath = ["."]
+asyncio_default_fixture_loop_scope = "function"
